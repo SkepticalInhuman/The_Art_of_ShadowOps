@@ -11,6 +11,22 @@ Program 2 takes filename, key and option between encryption and decryption from 
 
 caesar() function iterates through the string and shifts each character by the value of the key. Lowercase letters is shifted to lowercase message similarly uppercase letters is shifted to uppercase letters only. Special characters are left the same.
 caesar_file() function reads the text file and then uses caesar() function to encrypt or decrypt and writes the output in "output.txt" file.
+# Week 1 Python & Cryptography Assignment 2
+## Program1: GCD
+Takes input 2 numbers and outputs GCD of those two numbers using two methods. First method involves finding numbers(in the range (1 to min(a,b)) that divide both the input numbers and thus finding the largest common divisor. Second method involves the euclidean approach where GCD(a,b) = GCD(b%a,a) formula is used. This formula is iteratively run till a = 0 and the corresponding b would be the GCD.
+![Screenshot 2024-06-20 230634](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/903eb548-d0f9-4cc5-8d1a-a80f04f7c08b)
+## Program2: Extended euclidean theorem
+Takes input A,B,C,D and outputs a,b,c such that aA+bB+cC=D if there is a solution else outputs "NO solution". This is achieved through extended euclidean theorem. gcd(x,y,z)=gcd(x,gcd(y,z)). First we find a, b such that gcd(x,gcd(y,z))=ax+bgcd(y,z), then c, dsuch that gcd(y,z)=cy+dz. Finally we obtain gcd(x,y,z)=ax+bcy+bdz.
+Now ax+by = GCD(a,b) 
+gcd(a, b) = gcd(b%a, a)
+gcd(b%a, a) = (b%a)x1 + ay1
+ax + by = (b%a)x1 + ay1
+ax + by = (b – [b/a] * a)x1 + ay1
+ax + by = a(y1 – [b/a] * x1) + bx1
+Comparing we get x=y1-(b//a)x1 and y = x1. 
+Using gcd(x,y,z)=ax+bcy+bdz and x=y1-(b//a)x1 and y = x1 we are able to obtain the solution. If D is not divisible by GCD(A,B,C) then no solution exists.
+![Screenshot 2024-06-20 230826](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/09ad65e5-ece1-4f99-a27f-e2ca3cd645ad)
+
 
 
 
