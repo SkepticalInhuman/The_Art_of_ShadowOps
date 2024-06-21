@@ -30,6 +30,14 @@ Using gcd(x,y,z)=ax+bcy+bdz and x=y1-(b//a)x1 and y = x1 recursively, we are abl
 Takes input a string and outputs the encryptd and decrypted code. Two 100 digit primes are genrated using sympy module. The public and private keys are then generated using keys() function. The public key is chosen to be ten didgit number which is co prime[this is done using gcd_euclidean function from program 1] to (p-1)(q-1) where p, q are the large primes which were generated. The private key which is the multiplicative inverse of the public key mod (p-1)(q-1) is generated through the gcdExtended() function from program 2. Each character of the input message is converted to its ascii value and then individually encrypted and the the encrypted text is the join of all the encrypted characters.The message is encrypted using public key. modularexponentiation() function has been defined which calculates a^b mod n more efficiently by calculating mod after every time a is squared rather than calculating mod after a^b. The encrypted message is displayed. Each character of the encrypted message is then decrypted using private key and joined and finally the decrypted message is displayed.
 Message is encrypted through message^public mod (p-1)(q-1) and decrypted through encrypted_text^private mod (p-1)(q-1)
 ![Screenshot (75)](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/0c34c3d9-1d8c-4a2b-ace6-b9f792dbed22)
+## Paillier
+Similar to RSA, takes input a string and outputs the encryptd and decrypted code. Was only able to use 7 digit primes since larger primes leads to overflow. Paillier key generation, encryption and decryption is done similar to the RSA. Public key is (p*q)+1 where p and are q are two large primes. Private key is ((p-1)(q-1), multiplicative inverse of (p-1)(q-1) mod p*q)
+A random r coprime to p*q is generated in the range(0,p*q -1) for encryption. Encryption and decryption are done through paillier ruleset. modularexponentiation() function defined in the RSA description is used here as well for optimised calculations.
+![Screenshot (76)](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/6c90161f-2497-498e-80aa-489763f11ef6)
+## Elgamal
+Takes input a string and outputs the encryptd and decrypted code. Was only able to use 29 digit prime without leading to overflow. Key generation, encryption and decryption is done using elgamal rules. A function is_primitive_root() is defined which takes input a number alpha and the generated prime p and checks whether alpha is a primitive root to p. Unlike RSA and paillier, in elgamal the encrypted code contains 2 elements which are required for decryption.
+![Screenshot (77)](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/4acb855b-04e3-4989-a0b1-ccfa7a42daca)
+
 
 
 
