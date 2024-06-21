@@ -24,8 +24,13 @@ ax + by = (b%a)x1 + ay1
 ax + by = (b – [b/a] * a)x1 + ay1
 ax + by = a(y1 – [b/a] * x1) + bx1
 Comparing we get x=y1-(b//a)x1 and y = x1. 
-Using gcd(x,y,z)=ax+bcy+bdz and x=y1-(b//a)x1 and y = x1 we are able to obtain the solution. If D is not divisible by GCD(A,B,C) then no solution exists.
+Using gcd(x,y,z)=ax+bcy+bdz and x=y1-(b//a)x1 and y = x1 recursively, we are able to obtain the solution. If D is not divisible by GCD(A,B,C) then no solution exists.
 ![Screenshot 2024-06-20 230826](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/09ad65e5-ece1-4f99-a27f-e2ca3cd645ad)
+## RSA
+Takes input a string and outputs the encryptd and decrypted code. Two 100 digit primes are genrated using sympy module. The public and private keys are then generated using keys() function. The public key is chosen to be ten didgit number which is co prime[this is done using gcd_euclidean function from program 1] to (p-1)(q-1) where p, q are the large primes which were generated. The private key which is the multiplicative inverse of the public key mod (p-1)(q-1) is generated through the gcdExtended() function from program 2. Each character of the input message is converted to its ascii value and then individually encrypted and the the encrypted text is the join of all the encrypted characters.The message is encrypted using public key. modularexponentiation() function has been defined which calculates a^b mod n more efficiently by calculating mod after every time a is squared rather than calculating mod after a^b. The encrypted message is displayed. Each character of the encrypted message is then decrypted using private key and joined and finally the decrypted message is displayed.
+Message is encrypted through message^public mod (p-1)(q-1) and decrypted through encrypted_text^private mod (p-1)(q-1)
+![Screenshot (75)](https://github.com/SkepticalInhuman/Caesar_cipher/assets/96436121/0c34c3d9-1d8c-4a2b-ace6-b9f792dbed22)
+
 
 
 
