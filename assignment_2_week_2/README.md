@@ -23,4 +23,4 @@ Custom neural network without using tensorflow was created. It has one hidden la
 target = np.array([[0,0], [0,1], [1,0], [1,1]]) is the custom dataset used to train the model. Initially weights are set to zero and learning rate = 0.1. cross entropy loss and accuracy for every 100 iterations is printed.
 
 
-3. Building a custom optimizer was very hard to achieve and frequently ran into errors but after a lot of debugging was able to create somewhat of a custom optimizer.
+3.Building a custom optimizer was very hard to achieve and frequently ran into errors but after a lot of debugging was able to create somewhat of a custom optimizer.
