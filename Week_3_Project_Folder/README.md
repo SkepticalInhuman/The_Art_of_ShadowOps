@@ -12,3 +12,7 @@ loss: 0.6932 - accuracy: 0.5000 for test dataset
 
 The low accuracy value could be due to the low number of epochs and the inability of the model to grasp semantic details of the faces to classify as real or fake.
 
+## Link for model checkpoints
+
+https://drive.google.com/drive/folders/1J9TooRiKd2_SSbSfTjmBA8IIJpBEZc2x?usp=sharing
+
