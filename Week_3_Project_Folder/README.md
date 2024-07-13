@@ -6,7 +6,7 @@ Used pretrained VGG16 and InceptionnetV3 to classify images as fake or real from
 loss: 0.3633 - accuracy: 0.8420 for test dataset(VGG16)  loss: 0.4232 - accuracy: 0.8005 for test dataset(Inceptionet)
 
 ## Custom model
-Built a custom inceptionnetV1 to classify fake and real images of the same dataset. An inception module is defined has convolution layers of various kernels and a max pooling layer, the outputs of all these layers are concatenated. This architecture of wider layer instead of deeper layer allows to capture different details obtained by different kernels and allows to capture features at different scales. There is nearly 6.5 million parameters in this architecture. The inceptionV1 architecture is then defined making use of inception modules. Output from the inceptionnet is then fed into the neural network similar to the one used in the pretrained models case. Mode was trained for only one epoch due to time and system constraints.
+Built a custom inceptionnetV1 to classify fake and real images of the same dataset. An inception module is defined has convolution layers of various kernels and a max pooling layer, the outputs of all these layers are concatenated. This architecture of wider layer instead of deeper layer allows to capture different details obtained by different kernels and allows to capture features at different scales. There is nearly 6.5 million parameters in this architecture. The inceptionV1 architecture is then defined making use of inception modules. Output from the inceptionnet is then fed into the neural network similar to the one used in the pretrained models case. Model was trained for only one epoch due to time and system constraints.
 
 loss: 0.6932 - accuracy: 0.5000 for test dataset
 
