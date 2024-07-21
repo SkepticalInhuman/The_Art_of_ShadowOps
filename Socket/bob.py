@@ -13,4 +13,4 @@ def recv_image(save_path, host, port):
     print("Image received and saved")
 
 if __name__ == "__main__":
-    recv_image("C:/Users/USER/OneDrive/Desktop/soc/Socket/received_test.jpg", "localhost", 65432)     #calling the fuction with 'localhost' as the host name of the server and port number 65432 on which the server is listening
+    recv_image("received_test.jpg", "localhost", 65432)     #calling the fuction with 'localhost' as the host name of the server and port number 65432 on which the server is listening
